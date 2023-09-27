@@ -15,7 +15,7 @@ from utils import *
 NETWORK_TYPE = 'all'
 MILES_CONVERSION = 1609
 
-@st.cache
+@st.cache_data
 def fetch_graph(option, **kwargs):
     if option == 'Bounding Box':
         return ox.graph_from_bbox(**kwargs, network_type=NETWORK_TYPE)
