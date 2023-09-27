@@ -18,11 +18,11 @@ MILES_CONVERSION = 1609
 @st.cache_data
 def fetch_graph(option, **kwargs):
     if option == 'Bounding Box':
-        return ox.graph_from_bbox(**kwargs, network_type=NETWORK_TYPE)
+        return ox.graph_from_bbox(kwargs['min_lat'], kwargs['min_lon'],kwargs['max_lat'], kwargs['max_lon'], network_type=NETWORK_TYPE)
     elif option == 'City/State':
         return ox.graph_from_place(f"{kwargs['city']},{kwargs['state']}", network_type=NETWORK_TYPE).to_undirected()
     elif option == 'Point and Radius':
-        return ox.graph_from_point((kwargs['lat'], kwargs['long']), dist=kwargs['rad'], network_type=NETWORK_TYPE).to_undirected()
+        return ox.graph_from_point((kwargs['lat'], kwargs['lon']), dist=kwargs['rad'], network_type=NETWORK_TYPE).to_undirected()
 
 def main():
     
