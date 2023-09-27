@@ -34,7 +34,7 @@ def main():
         'Inspired by [Ricky Gates](https://www.everysinglestreet.com/why), I wanted to come up with a way to download a gpx file for the places I run. \
         This app [works](https://github.com/ml-rowlands) by solving the [Chinese Postman Problem](https://en.wikipedia.org/wiki/Chinese_postman_problem) on a graph created from OSM data. \
         It should work with both roads and trails, so a network of running or bike trails should be solvable as well.\
-        Try to limit the size of the geographical area for suitable performance  '
+        Try to limit the size of the geographical area for suitable performance.  '
     )
     
     
