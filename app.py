@@ -104,7 +104,7 @@ def main():
         
         eulerian_circuit = shortest(G)
         total_length = sum(G[u][v][0]['length'] for u, v in eulerian_circuit) / MILES_CONVERSION
-        st.write(f"Total length of the Eulerian circuit: {total_length} miles")
+        st.write(f"Total length of the Eulerian circuit: {round(total_length,1)} miles")
         
         gpx_xml = gpx_file(G, eulerian_circuit)
         st.session_state.gpx_xml = gpx_xml
